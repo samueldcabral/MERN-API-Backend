@@ -1,9 +1,24 @@
-const express = require('express');
+const express = require("express");
 const app = express();
-require('dotenv').config();
+const apiRouter = require("./routes/TodoRoutes");
+const mongoose = require("mongoose");
+require("dotenv").config();
 
-app.get('/', (req, res) => {
-  res.send('Hello World, this is Samuel!');
+//Express Middleware
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+//Api Endpoints
+app.use("/todos", apiRouter);
+
+app.get("/", (req, res) => {
+  res.send("Hello World, this is !");
 });
 
-app.listen(process.env.PORT, () => console.log(`Server listenning on port ${process.env.PORT}...`));
+//Setting up MongoDB connection
+mongoose.connect(process.env.DB_CONNECTION, { useNewUrlParser: true });
+let db = mongoose.connection;
+
+app.listen(process.env.PORT, () =>
+  console.log(`Server listenning on port ${process.env.PORT}...`)
+);

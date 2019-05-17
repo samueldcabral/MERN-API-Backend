@@ -9,11 +9,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 //Api Endpoints
-app.use("/todos", apiRouter);
-
-app.get("/", (req, res) => {
-  res.send("Hello World, this is !");
-});
+app.use("/api", apiRouter);
 
 //Setting up MongoDB connection
 mongoose.connect(process.env.DB_CONNECTION, { useNewUrlParser: true });

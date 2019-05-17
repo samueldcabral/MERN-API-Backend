@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 
+//Defining MongoDB Schema
 const TodoSchema = mongoose.Schema({
   todo: {
     type: String,
@@ -15,4 +16,5 @@ const TodoSchema = mongoose.Schema({
   }
 });
 
+//Export MongoDB Schema
 module.exports = mongoose.model("todo", TodoSchema);

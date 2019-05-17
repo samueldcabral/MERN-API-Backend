@@ -31,4 +31,5 @@ app.listen(process.env.PORT, () =>
 | Update Operation         |  done   |
 | Read Operation           |  done   |
 | Delete Operation         |  done   |
+| Implement Bcrypt for passwords  | pending |
 | Integrate a GraphQL Api  | pending |

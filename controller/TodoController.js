@@ -1,21 +1,9 @@
 const Todo = require("../models/TodoModel");
 
 //Handle get requests for all Todos
-exports.index = function(req, res) {
-  Todo.get(function(err, Todos) {
-    if (err) {
-      res.json({
-        status: "error",
-        message: err
-      });
-    }
-
-    res.json({
-      status: "success",
-      message: "successfully retrieved data",
-      data: Todos
-    });
-  });
+exports.index = async function(req, res) {
+  const allTodos = await Todo.find();
+  res.json({ data: allTodos });
 };
 
 //Handle post requests

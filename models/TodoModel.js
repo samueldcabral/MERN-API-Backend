@@ -15,8 +15,4 @@ const TodoSchema = mongoose.Schema({
   }
 });
 
-let Todo = (module.exports = mongoose.model("todo", TodoSchema));
-
-module.exports.get = function(callback, limit) {
-  Todo.find(callback).limit(limit);
-};
+module.exports = mongoose.model("todo", TodoSchema);

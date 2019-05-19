@@ -23,13 +23,13 @@ app.listen(process.env.PORT, () =>
 
 ## Features and Goals list
 
-| Feature                  | Status  |
-| ------------------------ | :-----: |
-| Setup express server     |  done   |
-| Setup mongodb connection |  done   |
-| Create Operation         |  done   |
-| Update Operation         |  done   |
-| Read Operation           |  done   |
-| Delete Operation         |  done   |
-| Implement Bcrypt for passwords  | pending |
-| Integrate a GraphQL Api  | pending |
+| Feature                        | Status  |
+| ------------------------------ | :-----: |
+| Setup express server           |  done   |
+| Setup mongodb connection       |  done   |
+| Create Operation               |  done   |
+| Update Operation               |  done   |
+| Read Operation                 |  done   |
+| Delete Operation               |  done   |
+| Implement Bcrypt for passwords | pending |
+| Integrate a GraphQL Api        | pending |
